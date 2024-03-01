@@ -1,0 +1,171 @@
+/* ------------------- */
+/* Custom properties   */
+/* ------------------- */
+
+:root {
+  /* * Colors: * */
+  /* ? primary colors ? */
+  --clr-primary-1: 236, 72%, 79%;
+  --clr-primary-2: 237, 63%, 64%;
+  /* ? neutral colors ? */
+  --clr-neutral-1: 240, 78%, 98%;
+  --clr-neutral-2: 234, 14%, 74%;
+  --clr-neutral-3: 233, 13%, 49%;
+  --clr-neutral-4: 232, 13%, 33%;
+  /* * Typography: * */
+  /* ? fonts families ? */
+  --ff-primary-1: 'Montserrat', sans-serif;
+  /* ? font sizes ? */
+  --fs-1000: 3.986rem;
+  --fs-900: 2.488rem;
+  --fs-800: 2.074rem;
+  --fs-700: 1.728rem;
+  --fs-600: 1.44rem;
+  --fs-500: 1.2rem;
+  --fs-400: 0.9375rem;
+  --fs-300: 0.833rem;
+  --fs-200: 0.694rem;
+}
+
+/* ------------------- */
+/* Body set up         */
+/* ------------------- */
+
+body {
+  line-height: 1.3;
+  min-height: 100svh;
+  position: relative;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: var(--fs-400);
+  font-family: var(--ff-primary-1);
+  font-weight: 700;
+  background-color: hsl(var(--clr-neutral-1));
+}
+
+/* ------------------- */
+/* Reset               */
+/* ------------------- */
+
+/* Box sizing */
+*, *::before, *::after { box-sizing: border-box; }
+
+/* Reset spacing */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+}
+
+/* make images easier to work with */
+img, picutre {
+  max-width: 100%;
+  display: block;
+}
+
+/* make form elements easier to work with */
+input, button, textarea, select { font: inherit; }
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ------------------- */
+/* Utility classes     */
+/* ------------------- */
+
+/* general */
+
+.flow > * + * {
+  margin-top: var(--flow-spacing, 1rem);
+}
+
+.flow-spacing--sm { --flow-spacing: .5rem; }
+.flow-spacing--lg { --flow-spacing: 2rem; }
+
+/* color */
+
+.text-clr-primary-2 { color: hsl(var(--clr-primary-2), var(--text-alpha, 1)); }
+
+.text-clr-neutral-1 { color: hsl(var(--clr-neutral-1), var(--text-alpha, 1)); }
+.text-clr-neutral-2 { color: hsl(var(--clr-neutral-2), var(--text-alpha, 1)); }
+.text-clr-neutral-3 { color: hsl(var(--clr-neutral-1), var(--text-alpha, 1)); }
+.text-clr-neutral-4 { color: hsl(var(--clr-neutral-2), var(--text-alpha, 1)); }
+
+.bg-clr-neutral-1 { background-color: hsl(var(--clr-neutral-1), var(--bg-alpha, 1)); }
+.bg-clr-neutral-2 { background-color: hsl(var(--clr-neutral-2), var(--bg-alpha, 1)); }
+.bg-clr-neutral-3 { background-color: hsl(var(--clr-neutral-1), var(--bg-alpha, 1)); }
+.bg-clr-neutral-4 { background-color: hsl(var(--clr-neutral-2), var(--bg-alpha, 1)); }
+
+/* typography */
+
+.ff-primary-1 { font-family: var(--ff-primary-1); }
+.ff-primary-2 { font-family: var(--ff-primary-2); }
+
+.fs-1000 { font-size: var(--fs-1000); }
+.fs-900 { font-size: var(--fs-900); }
+.fs-800 { font-size: var(--fs-800); }
+.fs-700 { font-size: var(--fs-700); }
+.fs-600 { font-size: var(--fs-600); }
+.fs-500 { font-size: var(--fs-500); }
+.fs-400 { font-size: var(--fs-400); }
+.fs-300 { font-size: var(--fs-300); }
+.fs-200 { font-size: var(--fs-200); }
+
+h1, h2, h3, h4, h5, h6 { line-height: 1.1; }
+
+/* other */
+
+/* ------------------- */
+/* Compontents         */
+/* ------------------- */
+
+.switch  div {
+  transform: translate3d(99%, 10%, 0);
+  transition: transform 150ms linear;
+}
+
+.switch input:not(:checked)+ div {
+  transform: translate3d(20%, 10%, 0);
+}
+
+/* ------------------- */
+/* Layout              */
+/* ------------------- */
+
+.grid-container {
+  display: grid;
+  margin: 2rem auto;
+  align-items: start;
+  grid-template-columns: 
+  minmax(1.5rem, 1fr)  
+  minmax(0, 80rem) 
+  minmax(1.5rem, 1fr);
+}
+
+.grid-container > *:nth-child(1) {
+  grid-column: 2;
+}

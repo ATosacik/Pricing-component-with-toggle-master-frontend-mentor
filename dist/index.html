@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <!-- Imports -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <!-- Title -->
+  <title>Pricing-component-with-toggle-master</title>
+  <!-- Css -->
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/tailwind.css">
+  <!-- JavaScript -->
+  <script defer src="./js/main.js"></script>
+</head>
+
+<body>
+  <img class="absolute top-[-2rem] lg:top-0 lg:right-0 right-[-11rem] z-[-1]" src="./images/bg-top.svg" alt="lines">
+  <img class="hidden lg:flex absolute left-0 bottom-0 z-[-1]" src="./images/bg-bottom.svg" alt="lines">
+
+  <main>
+    <div class="grid-container">
+      <div class="flex flex-col">
+        <div class="flex flex-col gap-10 my-20 items-center text-[hsl(var(--clr-neutral-3))]">
+          <h1 class="fs-800">Our Pricing</h1>
+          <div class="flex gap-6 items-center text-[hsl(var(--clr-neutral-2))] text-md">
+            <p class="">Annually</p>
+            <label
+              class="switch cursor-pointer relative w-14 h-8 rounded-full bg-gradient-to-r from-[hsl(var(--clr-primary-1))] to-[hsl(var(--clr-primary-2))] hover:to-[hsl(var(--clr-primary-1))]"><input
+                checked class="opacity-0 absolute" type="checkbox" />
+              <div class="h-[80%] aspect-square bg-white rounded-full">
+              </div>
+            </label>
+            <p class="">Monthly</p>
+          </div>
+        </div>
+        <div class="flex flex-col gap-8 lg:flex-row lg:items-center lg:gap-0">
+          <div
+            class="pricing-box text-[hsl(var(--clr-neutral-4))] flex lg:flex-1 flex-col gap-8 text-center justify-center bg-white rounded-lg p-8 lg:rounded-none lg:rounded-l-lg shadow-lg shadow-slate-200">
+            <h1 class="text-lg">Basic</h1>
+            <div class="flex self-center gap-1">
+              <span class="fs-900 self-center">&dollar;</span>
+              <span class="price fs-1000 leading-none">19.99</span>
+            </div>
+            <div class="flex flex-col">
+              <p class="py-4 border-t-[1px] border-[hsl(var(--clr-neutral-2))] border-solid">500 GB Storage</p>
+              <div class="py-4 border-t-[1px] border-[hsl(var(--clr-neutral-2))] border-solid">2 Users Allowed</div>
+              <p class="py-4 border-y-[1px] border-[hsl(var(--clr-neutral-2))] border-solid">Send up to 3 GB</p>
+            </div>
+            <a class="rounded-lg uppercase text-clr-neutral-1 line bg-gradient-to-r from-[hsl(var(--clr-primary-1))] to-[hsl(var(--clr-primary-2))] hover:from-white hover:to-white hover:text-[hsl(var(--clr-primary-2))] py-3 tracking-wider text-sm hover:ring-1 hover:ring-current"
+              href="#">Learn
+              More</a>
+          </div>
+          <div
+            class="pricing-box text-white flex lg:py-14 lg:flex-1 flex-col gap-8 text-center justify-center bg-gradient-to-b from-[hsl(var(--clr-primary-1))] to-[hsl(var(--clr-primary-2))] rounded-lg p-8">
+            <h1 class="text-lg">Professional</h1>
+            <div class="flex self-center gap-1">
+              <span class="fs-900 self-center">&dollar;</span>
+              <span class="price fs-1000 leading-none">24.99</span>
+            </div>
+            <div class="flex flex-col">
+              <p class="py-4 border-t-[1px] border-[hsl(var(--clr-neutral-2))] border-solid">1 TB Storage</p>
+              <div class="py-4 border-t-[1px] border-[hsl(var(--clr-neutral-2))] border-solid">5 Users Allowed</div>
+              <p class="py-4 border-y-[1px] border-[hsl(var(--clr-neutral-2))] border-solid">1 Send up to 10 GB</p>
+            </div>
+            <a class="rounded-lg bg-clr-neutral-1 uppercase text-clr-primary-2 py-3 tracking-wider text-sm hover:ring-1 hover:ring-current hover:text-[hsl(var(--clr-neutral-1))] hover:bg-transparent"
+              href="#">Learn
+              More</a>
+          </div>
+          <div
+            class="pricing-box text-[hsl(var(--clr-neutral-4))] flex lg:flex-1 flex-col gap-8 text-center justify-center rounded-lg bg-white p-8 lg:rounded-none lg:rounded-r-lg shadow-lg shadow-slate-200">
+            <h1 class="text-lg">Master</h1>
+            <div class="flex self-center gap-1">
+              <span class="fs-900 self-center">&dollar;</span>
+              <span class="price fs-1000 leading-none">39.99</span>
+            </div>
+            <div class="flex flex-col">
+              <p class="py-4 border-t-[1px] border-[hsl(var(--clr-neutral-2))] border-solid">2 TB Storage</p>
+              <div class="py-4 border-t-[1px] border-[hsl(var(--clr-neutral-2))] border-solid">10 Users Allowed</div>
+              <p class="py-4 border-y-[1px] border-[hsl(var(--clr-neutral-2))] border-solid">Send up to 20 GB</p>
+            </div>
+            <a class="rounded-md uppercase text-clr-neutral-1 line bg-gradient-to-r from-[hsl(var(--clr-primary-1))] to-[hsl(var(--clr-primary-2))] hover:from-white hover:to-white hover:text-[hsl(var(--clr-primary-2))] py-3 tracking-wider text-sm hover:ring-1 hover:ring-current"
+              href="#">Learn
+              More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>
